@@ -16,15 +16,15 @@ consol.log('"hello"')<br>
  let a = "hello world";<br>
  a[4];<br>
  결과 : 'o'<br>
- (Back tick) <br>
+ ``` `(Back tick)``` <br>
  Tab키 위에 있는거 템플릿? 문자열에 사용한다 <br>
  뭐든지 문자열로 변환해서 출력한다<br>
  수식 `23+40`  => 결과: '23+40'<br>
  문자열 `안녕` => 결과: '안녕'<br>
  계산시 아래처럼 써야 제대로 출력됨<br>
  `52+273 = ${52+273}`;<br>
- ``` `객체생성방법  결과 가져오기<br>
- new Date() . getFullyear() ```
+ ``` `객체생성방법  결과 가져오기```<br>
+ new Date() . getFullyear()
 
 ## [03월 16일]
 > 오늘 배운 내용 요약 <br />
