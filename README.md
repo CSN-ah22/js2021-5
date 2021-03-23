@@ -16,7 +16,7 @@ consol.log('"hello"')<br>
  let a = "hello world";<br>
  a[4];<br>
  결과 : 'o'<br>
- ```(Back tick) <br>
+ (Back tick) <br>
  Tab키 위에 있는거 템플릿? 문자열에 사용한다 <br>
  뭐든지 문자열로 변환해서 출력한다<br>
  수식 `23+40`  => 결과: '23+40'<br>
