@@ -24,7 +24,7 @@ consol.log('"hello"')<br>
  계산시 아래처럼 써야 제대로 출력됨<br>
  `52+273 = ${52+273}`;<br>
  ``` `객체생성방법  결과 가져오기```<br>
- new Date()  .  getFullyear()
+ new Date() \t. \t getFullyear()
 
 ## [03월 16일]
 > 오늘 배운 내용 요약 <br />
