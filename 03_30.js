@@ -33,7 +33,15 @@ switch ( date.getMonth() + 1){
     console.log("가을");
     break;
 }
-
+//삼항 연산자
 let number = 30;
 
 console.log(number%2 == 0?"짝수":"홀수");
+//초기화 구문 연습 - 초기값 x
+let test;
+test = test  ? test : "초기화 해 주세요";
+console.log(test);
+//초기화 구문 연습 - 초기값 o
+let num = 31;
+num = num  ? num : "초기화 해 주세요";
+console.log(num);
