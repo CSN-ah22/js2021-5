@@ -45,3 +45,30 @@ console.log(test);
 let num = 31;
 num = num  ? num : "초기화 해 주세요";
 console.log(num);
+
+console.log("---------------------");
+
+test = test || "초기화 해주세요";
+console.log(test);
+
+num = num|| "초기화 해주세요";
+console.log(num);
+
+//배열 연습
+let foo = ["한글","abc", 1004 , 3.141592, true, false ]
+console.log(foo);
+
+//입력문 연습
+const repl = require('repl'); //상수
+repl.start({
+  prompt: "숫자입력> ",
+  eval: (command, context, filename, callback) =>{
+    let number = Number(command);
+    if(isNaN(number)){ //NaN은 숫자로 변환 할 수 없는 문자열을 의미(숫자 자료형이지만 숫자가 아닌것)
+      console.log("숫자가 아닙니다");
+    }else{
+      console.log("숫자 입니다");
+    }
+    callback();
+  }
+})
