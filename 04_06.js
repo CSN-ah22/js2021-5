@@ -48,7 +48,7 @@ for(let i = 0; i< 10; i++){// 줄
    }
    console.log(star3);
 
-   //삼각형 출력 4 마름모
+   //삼각형 출력 4 마름모 실패..
    let star4 = "";
    for(let i=0; i<3; i++){ //줄
        for(let star=5; star<0; star-2){
