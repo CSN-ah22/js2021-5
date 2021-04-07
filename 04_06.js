@@ -48,19 +48,35 @@ for(let i = 0; i< 10; i++){// 줄
    }
    console.log(star3);
 
-   //삼각형 출력 4 마름모 실패..
+   //삼각형 출력 4 마름모 
    let star4 = "";
-   for(let i=0; i<3; i++){ //줄
-       for(let star=5; star<0; star-2){
-           star4=star4+"*";
-       }
-    star4 += "\n";
-    for(let j=0; j<i; j++){ 
+   for(let i = 0; i< 9; i++){// 줄
+    for(let j = 0; j<9-i; j++){
         star4 = star4+" ";
     }
+    for(let star = 0; star<i+1; star++){
+        star4 = star4+"*";
+    }
+    for(let star = 1; star<i+1; star++){
+        star4 = star4+"*";
+    }
+    star4 += "\n";
+    }
+   
+   for(let i=0; i<10; i++){
+       for(let j=0; j<i; j++){
+           star4= star4+" ";
+       }
+       for(star1=0; star1< 10-i;star1++){
+           star4= star4+"*";
+       }
+       for(star2=0; star2< 10-(i+1);star2++){
+           star4= star4+"*";
+       }
+       star4 = star4+"\n";
    }
    console.log(star4);
-
+   
 //join실습
    j = [0, 1, 2, 3, 4];
    j = j.join("/");
