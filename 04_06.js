@@ -67,15 +67,49 @@ for(let i = 0; i< 10; i++){// 줄
        for(let j=0; j<i; j++){
            star4= star4+" ";
        }
-       for(star1=0; star1< 10-i;star1++){
+       for(star1=0; star1< 10-i;star1++){ //별 개수: 10,9,8,7...
            star4= star4+"*";
        }
-       for(star2=0; star2< 10-(i+1);star2++){
+       for(star2=0; star2< 10-(i+1);star2++){ //별 개수: 9,8,7...
            star4= star4+"*";
        }
        star4 = star4+"\n";
    }
    console.log(star4);
+
+   //삼각형 출력 사다리꼴
+   let star5= "";
+   let star5= "";
+   for(let i=0; i<5; i++){
+       for(let j=1; j<5-i; j++){
+           star5 = star5+" ";
+        }
+        for(let star=0; star<3+i; star++){ //5의 반절씩 3과 2 즉 나눈몫의 0.5올림과 나머지에서 0.5를 뺀것
+            star5= star5+"*";
+        }
+        for(let star=0; star<2+i; star++){
+            star5=star5+"*";
+        }
+        star5=star5+"\n";
+   }
+   console.log(star5);
+
+   //삼각형 출력 사다리꼴 거꾸로
+   let star6="";
+   for(let i=0; i<5; i++){
+    for(let j=0; j<i; j++){ //첫줄부터 공백넣으려면 i+1 로 하면 됨 +2면 공백이 2개임
+        star6 = star6+" ";
+     }
+     for(let star=0; star<=6-i; star++){ //<=부등호 주의!
+         star6= star6+"*";
+     }
+     for(let star=0; star<=5-i; star++){
+         star6=star6+"*";
+     }
+     star6=star6+"\n";
+}
+console.log(star6);
+       
    
 //join실습
    j = [0, 1, 2, 3, 4];
