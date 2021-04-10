@@ -79,7 +79,6 @@ for(let i = 0; i< 10; i++){// 줄
 
    //삼각형 출력 사다리꼴
    let star5= "";
-   let star5= "";
    for(let i=0; i<5; i++){
        for(let j=1; j<5-i; j++){
            star5 = star5+" ";
