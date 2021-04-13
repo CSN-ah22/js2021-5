@@ -1,5 +1,81 @@
 # 최선아 [202030430]
 
+## [4월 13일]
+>7주차<br />
+
+익명 함수 : 이름이 없는 함수<br />
+``` javascript
+let foo = function(){/* 변수에 함수를 넣는다 */
+    console.log("첫번줄");
+    console.log("두번줄");
+};
+
+foo();
+```
+<br />
+선언적 함수 : 이름이 있는 함수 <br />
+
+``` javascript
+function foo2 (){
+    console.log("첫번줄");
+    console.log("두번줄");
+};
+
+foo2();
+```
+<br />
+화살표 함수 ✨
+
+``` javascript
+let foo3 = () =>{
+    console.log("첫번줄");
+    console.log("두번줄");
+}
+foo3();
+```
+<br />
+매개변수를 입력하지 않고 함수를 호출하면 undefined가 출력됨
+<br />
+<br />
+콜백함수 : 재귀함수 같은 역할
+
+```javascript
+/* 콜백함수 */
+function tenTimes(foo){/* foo 가 무명함수 */
+    for(let i=0; i<=9; i++){
+        foo();/* 무명함수를 10번 호출한다 */
+    }
+}
+
+tenTimes(()=>{/* 무명함수 호출 */
+    console.log("함수 호출");
+});
+```
+<br />
+문자>> 정수, 실수로 변환하기
+
+```javascript
+let inputA = '52';
+parseInt(inputA);
+console.log(inputA);
+
+let inputB = '52.273';
+parseFloat(inputB);
+console.log(inputB);
+```
+<br />
+time메서드 사용하기
+
+```javascript
+setTimeout(()=>{/* 한번만 출력 */
+    console.log("1초 경과");
+},1000);
+
+ setInterval(()=>{/* 무한루프 */
+     console.log("Interval 1초 경과");
+ },1000)
+```
+
 ## [4월 6일]
 >수업내용<br />
 
