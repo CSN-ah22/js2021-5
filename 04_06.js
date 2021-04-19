@@ -118,6 +118,6 @@ console.log(star6);
 //splice 실습
    foo = ["a", "b", "c", "d", "e"];
    bar = foo.splice(2,2); 
-//    bar = foo.splice(2,2, 100, 0.5, "문자"); 세번째 부턴 잘라진 곳에 추가함
+    bar = foo.splice(2,2, 100, 0.5, "문자"); /* 세번째 부턴 잘라진 곳에 추가함 즉 100,0.5,문자가 인덱스를 차지 */
    console.log(foo); //잘라내고 남은건 여기에
    console.log(bar); //잘라낸건 여기에
