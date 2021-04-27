@@ -87,3 +87,14 @@ let id = setInterval(function(){/* 무한루프 */
     for(let i of products ){ 
         printProduct(i);
     }
+
+    //js에선 생성자 사용시 JSON 형태로 초기화됨
+
+    function products2(name , price){
+        this.name = name;
+        this.price = price;
+    }
+
+    let obj2 = new products2("바나나", 5000);
+
+    console.log(obj2);

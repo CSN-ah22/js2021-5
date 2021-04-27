@@ -78,7 +78,20 @@ let products = [
         printProduct(i);
     }
 ```
+• 생성자 함수 : JSON 형태로 키와 키값을 초기화 시킨다<br />
 
+``` javascript
+//js에선 생성자 사용시 JSON 형태로 초기화됨
+
+    function products2(name , price){
+        this.name = name;
+        this.price = price;
+    }
+
+    let obj2 = new products2("바나나", 5000);
+
+    console.log(obj2);
+```
 
 ## [4월 13일]
 >7주차<br />
