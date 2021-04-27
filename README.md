@@ -1,5 +1,65 @@
 # 최선아 [202030430]
 
+## [4월 27일]
+>9주차<br />
+
+<br />
+• time함수 사용해보기<br />
+
+``` javascript
+let id = setInterval(function(){/* 무한루프 */
+        console.log("Interval 1초 경과");
+     },1000);
+
+     setTimeout(() => {/* 무한루프 막기 */
+         clearInterval(id);
+     }, 3000);
+
+```
+• 우선순위 주의점 : 선언 함수가 가장 먼저 컴파일된다<br />
+``` javascript
+ //익명함수는 선언적 함수를 무조건 덮어쓴다
+     foo2 = () => {console.log("1st");};//익명
+     function foo2(){console.log("2nd");}; //선언적
+
+    foo2();
+```
+• this키워드 사용해보기<br />
+``` javascript
+let name = "dong";
+
+    foo3 = () => {
+        let name = "syna";
+        this.name = name;//초기화를 해주지 않으면 undefined
+        console.log(this.name);
+    };
+    foo3();
+```
+<br />
+• JSON 방식의 파일 포맷<br /><br />
+
+> key : key값<br /><br />
+> ex)     제품명: "7D 건조 망고",<br />
+>        번호: 8097<br />
+
+<br />
+• 객체 안에 Json 형식의 함수 선언하기<br />
+
+``` javascript
+//객체 안에 Json 형식의 함수 선언하기
+    let foo6 = {
+        name2 : "건조망고",
+        price : 122,
+        print: function(){
+            console.log(`${this.name2}-${this.price}`);
+            //function 키워드를 쓰지않으면 undfined가 나옴
+        }
+    };
+    foo6.print();
+```
+
+
+
 ## [4월 13일]
 >7주차<br />
 
