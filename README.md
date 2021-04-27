@@ -57,7 +57,27 @@ let name = "dong";
     };
     foo6.print();
 ```
+• JSON+배열<br />
 
+``` javascript
+let products = [
+        {name: '사과', price: 1200}/*한덩이*/,
+        {name: '배', price: 1500},
+        {name: '자두', price: 1000},
+        {name: '딸기', price: 2000},
+        {name: '바나나', price: 1500},
+
+    ];
+
+    function printProduct(obj){
+        console.log(`${obj.name} - ${obj.price} `);
+
+    }
+
+    for(let i of products ){ 
+        printProduct(i);
+    }
+```
 
 
 ## [4월 13일]
