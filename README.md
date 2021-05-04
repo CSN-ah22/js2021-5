@@ -32,7 +32,18 @@ String 객체,  <br />
 Date 객체,<br />
 Array 객체 등등 (MDN 사이트 참고)<br /><br />
 
+• 두 가지 변수 선언의 차이점
+
+``` javascript
+let number = new Number(342);
+let number2 = 453;
+
+console.log(typeof number); //object 출력
+console.log(typeof number2); //자료형 number 출력
+```
+
 • 기본 자료형에 프로토타입의 메소드를 넣어보기 <br />
+
 ``` javascript
 
 //기본 자료형에 프로토타입의 메소드를 넣을 수 있다
