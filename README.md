@@ -6,7 +6,7 @@
 •모질라
 https://developer.mozilla.org/ko/docs/Web/JavaScript
 
-•언더 스코어<br />
+•언더 스코어
 https://underscorejs.org/
 
 • Date 객체 사용해보기
@@ -92,7 +92,7 @@ console.log(bar);
 
 let foobar = foo3.filter((item, index) => {
     return item % 2 == 0;// 짝수만 return 해서 새로운 배열에 넣음
-})
+});
 
 console.log(foobar);
 ```
