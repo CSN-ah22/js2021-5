@@ -1,5 +1,99 @@
 # 최선아 [202030430]
 
+## [5월 18일]
+>12주차  
+
+• OS모듈 사용해보기
+``` javascript
+const os = require('os'); //os객체 생성
+console.log(os.hostname());
+console.log(os.totalmem());
+```
+• URL모듈 사용해보기
+``` javascript
+const url = require('url');
+console.log(url.parse("https://naver.com"));
+```
+•파일 모듈 사용해보기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)
+``` javascript
+const fs = require('fs');
+const file = fs.readFileSync('textfile.txt');
+console.log(file);
+console.log(file.toString());
+```
+•파일 모듈 사용해보기(비동기적:파일이 다운로드 되는동안 ③부분을 실행함)
+``` javascript
+①const fs = require('fs');
+②fs.readFile('textfile.txt',(error,file)=>{
+    ④console.log(file);
+    ⑤console.log(file.toString());
+})
+③
+```
+• 🥕콜백 함수의 형태🥕
+>통상 첫 번째 매개변수는 '오류'를 나타내는 오류객체 이다.
+</br>
+두번째 매개변수는 원하는 값의 타입(?)이다.
+
+• 🥕파일 쓰기(동기식)🥕
+``` javascript
+ const fs = require('fs');
+
+ fs.writeFileSync('output.txt','안녕하쇼');
+ console.log("파일 쓰기 완료");
+```
+• 🥕파일 쓰기(비동기식)🥕
+``` javascript
+const fs = require('fs');
+
+fs.writeFile('output.txt','안녕하쇼',(error) =>{
+console.log("파일 쓰기 완료");
+});
+```
+• 🥕파일 예외처리(동기식)🥕
+``` javascript
+const fs = require('fs');
+
+try{
+const file1 =fs.readFileSync('none.txt');
+console.log(file);
+console.log(file.toString());
+}catch(exception){
+    console.log("파일이 없습니다");
+}
+```
+• 🥕파일 예외처리(비동기식)🥕
+``` javascript
+const fs = require('fs');
+fs.readFile('none.txt',(error,file)=>{
+    if(error){
+        console.log("예외 발생");
+    }else{
+    console.log(file);
+    console.log(file.toString());
+    }
+})
+```
+• 🥕request모듈 사용:(외부 페이지의 html 출력)🥕
+``` javascript
+//request모듈
+const request = require('request');
+
+request("https://naver.com",(error,response, body)=>{
+    console.log(body);
+})
+```
+• 🥕CHEERIO모듈 사용🥕
+``` javascript
+//cheerio모듈
+const request1 = require('request');
+const cheerio = require('cheerio');
+request1("https://naver.com",(error,response, body)=>{
+    const $ = cheerio.load(body);
+    console.log($("strong.new").text());
+})
+```
+
 ## [5월 11일]
 >11주차  
 
