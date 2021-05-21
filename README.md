@@ -178,7 +178,7 @@ fs.readFile('none.txt',(error,file)=>{
 <hr>
 
 <details>
-<summary>• 🥕request모듈 사용:(외부 페이지의 html 출력)🥕</summary>
+<summary>• 🥕request모듈 사용 : (외부 페이지의 html 출력)🥕</summary>
 <div markdown="1">       
     
 ``` javascript
@@ -192,7 +192,7 @@ request("https://naver.com",(error,response, body)=>{
 </details>    
 
 <details>
-<summary>• 🥕CHEERIO모듈 사용:(외부 페이지의 html에서 원하는 부분 출력)🥕</summary>
+<summary>• 🥕CHEERIO모듈 사용 : (외부 페이지의 html에서 원하는 부분 출력)🥕</summary>
 <div markdown="1">  
     
 ``` javascript
