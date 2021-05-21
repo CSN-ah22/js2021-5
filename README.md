@@ -60,23 +60,38 @@ console.log(os.hostname());
 console.log(os.totalmem());
 ```
 </details>
+    
+    <hr>
 
-
-
-
-• URL모듈 사용해보기
+<details>
+<summary>• URL모듈 사용해보기</summary>
+<div markdown="1">
+    parse("") : URL문자열을 URL객체로 변화해 리턴해준다</br>
 ``` javascript
 const url = require('url');
 console.log(url.parse("https://naver.com"));
 ```
-•파일 모듈 사용해보기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)
+</details>
+    
+    <hr>
+
+🍀 파일 모듈 사용해보기 </br>
+    
+<details>
+<summary>•파일 읽기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)</summary>
+<div markdown="1">
 ``` javascript
 const fs = require('fs');
 const file = fs.readFileSync('textfile.txt');
 console.log(file);
 console.log(file.toString());
 ```
-•파일 모듈 사용해보기(비동기적:파일이 다운로드 되는동안 ③부분을 실행함)
+</details>
+
+<details>
+<summary>•파일 읽기(비동기적:파일이 다운로드 되는동안 ③부분을 실행함)</summary>
+<div markdown="1">       
+
 ``` javascript
 ①const fs = require('fs');
 ②fs.readFile('textfile.txt',(error,file)=>{
@@ -85,19 +100,34 @@ console.log(file.toString());
 })
 ③
 ```
-• 🥕콜백 함수의 형태🥕</br>
+</details>
+
+    <hr>
+<details>
+<summary>• 🥕콜백 함수의 형태🥕</summary>
+<div markdown="1">       
+</br>
 통상 첫 번째 매개변수는 '오류'를 나타내는 오류객체 이다.
 </br>
 두번째 매개변수는 원하는 값의 타입(?)이다.
+</details>
 
-• 🥕파일 쓰기(동기식)🥕
+    <hr>
+    
+<details>
+<summary>• 🥕파일 쓰기(동기식)🥕</summary>
+<div markdown="1">       
 ``` javascript
  const fs = require('fs');
 
  fs.writeFileSync('output.txt','안녕하쇼');
  console.log("파일 쓰기 완료");
 ```
-• 🥕파일 쓰기(비동기식)🥕
+</details>
+
+<details>
+<summary>• 🥕파일 쓰기(비동기식)🥕</summary>
+<div markdown="1">       
 ``` javascript
 const fs = require('fs');
 
@@ -105,8 +135,12 @@ fs.writeFile('output.txt','안녕하쇼',(error) =>{
 console.log("파일 쓰기 완료");
 });
 ```
-• 🥕파일 예외처리(동기식)🥕
-``` javascript
+</details>
+
+<details>
+<summary>• 🥕파일 예외처리(동기식)🥕</summary>     
+<div markdown="1">       
+ ``` javascript
 const fs = require('fs');
 
 try{
@@ -117,7 +151,11 @@ console.log(file.toString());
     console.log("파일이 없습니다");
 }
 ```
-• 🥕파일 예외처리(비동기식)🥕
+</details>
+
+<details>
+<summary>• 🥕파일 예외처리(비동기식)🥕</summary>
+<div markdown="1">       
 ``` javascript
 const fs = require('fs');
 fs.readFile('none.txt',(error,file)=>{
@@ -129,7 +167,13 @@ fs.readFile('none.txt',(error,file)=>{
     }
 })
 ```
-• 🥕request모듈 사용:(외부 페이지의 html 출력)🥕
+</details>
+
+<hr>
+
+<details>
+<summary>• 🥕request모듈 사용:(외부 페이지의 html 출력)🥕</summary>
+<div markdown="1">       
 ``` javascript
 //request모듈
 const request = require('request');
@@ -138,7 +182,11 @@ request("https://naver.com",(error,response, body)=>{
     console.log(body);
 })
 ```
-• 🥕CHEERIO모듈 사용🥕
+</details>    
+
+<details>
+<summary>• 🥕CHEERIO모듈 사용🥕</summary>
+<div markdown="1">       
 ``` javascript
 //cheerio모듈
 const request1 = require('request');
@@ -148,7 +196,8 @@ request1("https://naver.com",(error,response, body)=>{
     console.log($("strong.new").text());
 })
 ```
-
+</details>
+    
 ## [5월 11일]
 >11주차  
 
