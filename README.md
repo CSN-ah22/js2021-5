@@ -26,8 +26,8 @@ on(이벤트 이름, 이벤트 핸들러)</br>
 </details>
 
 <details>
-<summary>🥕실습🥕</br></summary>
-<div markdown="1">       
+<summary>🥕실습🥕</summary>
+<div markdown="1">
 ``` javascript
 //exit 이벤트 실습
 process.on('exit',(code) = >{
