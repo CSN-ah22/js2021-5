@@ -65,7 +65,7 @@ console.log(os.totalmem());
 
 <details>
 <summary>• URL모듈 사용해보기</summary>
-<div markdown="1">
+<div markdown="1"> 
     parse("") : URL문자열을 URL객체로 변화해 리턴해준다</br>
 ``` javascript
 const url = require('url');
@@ -80,6 +80,7 @@ console.log(url.parse("https://naver.com"));
 <details>
 <summary>•파일 읽기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)</summary>
 <div markdown="1">
+    
 ``` javascript
 const fs = require('fs');
 const file = fs.readFileSync('textfile.txt');
@@ -103,6 +104,7 @@ console.log(file.toString());
 </details>
 
     <hr>
+    
 <details>
 <summary>• 🥕콜백 함수의 형태🥕</summary>
 <div markdown="1">       
@@ -116,7 +118,8 @@ console.log(file.toString());
     
 <details>
 <summary>• 🥕파일 쓰기(동기식)🥕</summary>
-<div markdown="1">       
+<div markdown="1">     
+    
 ``` javascript
  const fs = require('fs');
 
@@ -128,6 +131,7 @@ console.log(file.toString());
 <details>
 <summary>• 🥕파일 쓰기(비동기식)🥕</summary>
 <div markdown="1">       
+    
 ``` javascript
 const fs = require('fs');
 
@@ -139,7 +143,8 @@ console.log("파일 쓰기 완료");
 
 <details>
 <summary>• 🥕파일 예외처리(동기식)🥕</summary>     
-<div markdown="1">       
+<div markdown="1">   
+    
  ``` javascript
 const fs = require('fs');
 
@@ -156,6 +161,7 @@ console.log(file.toString());
 <details>
 <summary>• 🥕파일 예외처리(비동기식)🥕</summary>
 <div markdown="1">       
+    
 ``` javascript
 const fs = require('fs');
 fs.readFile('none.txt',(error,file)=>{
@@ -174,6 +180,7 @@ fs.readFile('none.txt',(error,file)=>{
 <details>
 <summary>• 🥕request모듈 사용:(외부 페이지의 html 출력)🥕</summary>
 <div markdown="1">       
+    
 ``` javascript
 //request모듈
 const request = require('request');
