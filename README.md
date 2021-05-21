@@ -4,7 +4,7 @@
 >12주차  
 
 <details>
-<summary>• 🥕Process란?🥕</summary>
+<summary>• 🥕Process란?�</summary>
 <div markdown="1">       
 Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
 </details>
@@ -207,7 +207,8 @@ request1("https://naver.com",(error,response, body)=>{
 </details>
     
 <hr>
-<hr>    
+<hr>
+    
 ## [5월 11일]
 >11주차  
 
