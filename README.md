@@ -3,6 +3,36 @@
 ## [5월 18일]
 >12주차  
 
+Process란?</br>
+Process = 객체</br>
+자바에서 클래스를 객체생성하여 사용하듯이</br>
+
+🥕js의 이벤트 연결메서드🥕 </br>
+on(이벤트 이름, 이벤트 핸들러)</br>
+이름에 따라 연결되는 이벤트가 다름</br>
+이벤트 핸들러에 리턴값이 들어옴</br>
+
+🥕Process객체의 이벤트 종류🥕</br>
+'exit' : 프로세스 객체가 종료될때 발생</br>
+'uncaughtException' : 예외가 일어날때 발생</br>
+
+🥕실습🥕</br>
+``` javascript
+//exit 이벤트 실습
+process.on('exit',(code) = >{
+    console.log('프로세스 종료되었습니다');
+    console.log(`exit 에빈트 매개 변수: ${code}`);
+});
+//uncaughtException
+process.on('uncaughtException', (error) = >{
+    console.log('예외가 발생했습니다');
+    console.log(`uncaughtException 이벤트 매개 변수: ${error}`);
+});
+
+//예외를 강제로 발생
+error.error.error();
+```
+
 • OS모듈 사용해보기
 ``` javascript
 const os = require('os'); //os객체 생성
