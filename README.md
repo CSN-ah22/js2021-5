@@ -49,7 +49,7 @@ error.error.error();
 <hr>    
     
 <details>
-<summary>• OS모듈 사용해보기</summary>
+<summary>• 🥕 OS모듈 사용해보기</summary>
 <div markdown="1">
 os의 사용용도 보다
 require() 을 이용하여 모듈을 추출 한다는점에 집중    
@@ -64,7 +64,7 @@ console.log(os.totalmem());
 <hr>
 
 <details>
-<summary>• URL모듈 사용해보기</summary>
+<summary>• 🥕 URL모듈 사용해보기</summary>
 <div markdown="1"> 
     parse("") : URL문자열을 URL객체로 변화해 리턴해준다</br>
 ``` javascript
@@ -129,7 +129,7 @@ console.log(file.toString());
 </details>
 
 <details>
-<summary>• 🥕파일 쓰기(비동기식)🥕</summary>
+<summary>• 🥕파일 쓰기(비동기식)</summary>
 <div markdown="1">       
     
 ``` javascript
@@ -142,7 +142,7 @@ console.log("파일 쓰기 완료");
 </details>
 
 <details>
-<summary>• 🥕파일 예외처리(동기식)🥕</summary>     
+<summary>• 🥕파일 예외처리(동기식)</summary>     
 <div markdown="1">   
     
  ``` javascript
@@ -159,7 +159,7 @@ console.log(file.toString());
 </details>
 
 <details>
-<summary>• 🥕파일 예외처리(비동기식)🥕</summary>
+<summary>• 🥕파일 예외처리(비동기식)</summary>
 <div markdown="1">       
     
 ``` javascript
