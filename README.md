@@ -192,7 +192,7 @@ request("https://naver.com",(error,response, body)=>{
 </details>    
 
 <details>
-<summary>• 🥕CHEERIO모듈 사용🥕</summary>
+<summary>• 🥕CHEERIO모듈 사용:(외부 페이지의 html에서 원하는 부분 출력)🥕</summary>
 <div markdown="1">  
     
 ``` javascript
@@ -205,7 +205,7 @@ request1("https://naver.com",(error,response, body)=>{
 })
 ```
 </details>
-    
+    </br>    
 <hr>
 <hr>
     
