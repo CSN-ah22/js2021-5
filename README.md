@@ -7,8 +7,13 @@
 <summary>Process란?</summary>
 <div markdown="1">       
 
-Process = 객체</br>
-자바에서 클래스를 객체생성하여 사용하듯이</br>
+Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
+
+</div>
+<summary>Process란?</summary>
+<div markdown="1">       
+
+Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
 
 </div>
 </details>
