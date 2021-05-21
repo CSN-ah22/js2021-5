@@ -3,9 +3,15 @@
 ## [5월 18일]
 >12주차  
 
-Process란?</br>
+<details>
+<summary>Process란?</summary>
+<div markdown="1">       
+
 Process = 객체</br>
 자바에서 클래스를 객체생성하여 사용하듯이</br>
+
+</div>
+</details>
 
 🥕js의 이벤트 연결메서드🥕 </br>
 on(이벤트 이름, 이벤트 핸들러)</br>
