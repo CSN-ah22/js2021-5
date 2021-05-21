@@ -4,13 +4,13 @@
 >12주차  
 
 <details>
-<summary>🥕•Process란?🥕</summary>
+<summary>• 🥕Process란?🥕</summary>
 <div markdown="1">       
 Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
 </details>
 
 <details>
-<summary>🥕js의 이벤트 연결메서드🥕</summary>
+<summary>• 🥕js의 이벤트 연결메서드🥕</summary>
 <div markdown="1">       
 on(이벤트 이름, 이벤트 핸들러)</br>
 이름에 따라 연결되는 이벤트가 다름</br>
@@ -18,7 +18,7 @@ on(이벤트 이름, 이벤트 핸들러)</br>
 </details>
 
 <details>
-<summary>🥕Process객체의 이벤트 종류🥕</br></summary>
+<summary>• 🥕Process객체의 이벤트 종류🥕</br></summary>
 <div markdown="1">       
 
 'exit' : 프로세스 객체가 종료될때 발생</br>
@@ -26,7 +26,7 @@ on(이벤트 이름, 이벤트 핸들러)</br>
 </details>
 
 <details>
-<summary>🥕실습🥕</summary>
+<summary>• 🥕실습🥕</summary>
 <div markdown="1">
     
 ``` javascript
@@ -49,7 +49,7 @@ error.error.error();
 <hr>    
     
 <details>
-<summary>🥕OS모듈 사용해보기🥕</summary>
+<summary>• 🥕OS모듈 사용해보기🥕</summary>
 <div markdown="1">
 os의 사용용도 보다
 require() 을 이용하여 모듈을 추출 한다는점에 집중    
@@ -64,7 +64,7 @@ console.log(os.totalmem());
 <hr>
 
 <details>
-<summary>🥕URL모듈 사용해보기🥕</summary>
+<summary>• 🥕URL모듈 사용해보기🥕</summary>
 <div markdown="1"> 
     parse("") : URL문자열을 URL객체로 변화해 리턴해준다</br>
 ``` javascript
@@ -78,7 +78,7 @@ console.log(url.parse("https://naver.com"));
 🍀 파일 모듈 사용해보기 </br>
     
 <details>
-<summary>🥕파일 읽기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)🥕</summary>
+<summary>• 🥕파일 읽기(동기적:파일이 전부 다운로드 될 때까지 멈춰있음)🥕</summary>
 <div markdown="1">
     
 ``` javascript
@@ -90,7 +90,7 @@ console.log(file.toString());
 </details>
 
 <details>
-<summary>🥕파일 읽기(비동기적:파일이 다운로드 되는동안 ③부분을 실행함🥕</summary>
+<summary>• 🥕파일 읽기(비동기적:파일이 다운로드 되는동안 ③부분을 실행함🥕</summary>
 <div markdown="1">       
 
 ``` javascript
