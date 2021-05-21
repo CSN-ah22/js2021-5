@@ -6,22 +6,16 @@
 <details>
 <summary>Process란?</summary>
 <div markdown="1">       
-
 Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
-
-</div>
-<summary>Process란?</summary>
-<div markdown="1">       
-
-Process 는 자바에서 클래스를 객체생성하여 사용하듯이 js에서의 객체라고 보면 된다</br>
-
-</div>
 </details>
 
-🥕js의 이벤트 연결메서드🥕 </br>
+<details>
+<summary>🥕js의 이벤트 연결메서드🥕</summary>
+<div markdown="1">       
 on(이벤트 이름, 이벤트 핸들러)</br>
 이름에 따라 연결되는 이벤트가 다름</br>
 이벤트 핸들러에 리턴값이 들어옴</br>
+</details>
 
 🥕Process객체의 이벤트 종류🥕</br>
 'exit' : 프로세스 객체가 종료될때 발생</br>
