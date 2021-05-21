@@ -61,7 +61,7 @@ console.log(os.totalmem());
 ```
 </details>
     
-    <hr>
+<hr>
 
 <details>
 <summary>• URL모듈 사용해보기</summary>
@@ -73,7 +73,7 @@ console.log(url.parse("https://naver.com"));
 ```
 </details>
     
-    <hr>
+<hr>
 
 🍀 파일 모듈 사용해보기 </br>
     
@@ -103,7 +103,7 @@ console.log(file.toString());
 ```
 </details>
 
-    <hr>
+<hr>
     
 <details>
 <summary>• 🥕콜백 함수의 형태🥕</summary>
@@ -114,7 +114,7 @@ console.log(file.toString());
 두번째 매개변수는 원하는 값의 타입(?)이다.
 </details>
 
-    <hr>
+<hr>
     
 <details>
 <summary>• 🥕파일 쓰기(동기식)🥕</summary>
