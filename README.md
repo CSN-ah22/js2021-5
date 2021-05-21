@@ -17,11 +17,17 @@ on(이벤트 이름, 이벤트 핸들러)</br>
 이벤트 핸들러에 리턴값이 들어옴</br>
 </details>
 
-🥕Process객체의 이벤트 종류🥕</br>
+<details>
+<summary>🥕Process객체의 이벤트 종류🥕</br></summary>
+<div markdown="1">       
+
 'exit' : 프로세스 객체가 종료될때 발생</br>
 'uncaughtException' : 예외가 일어날때 발생</br>
+</details>
 
-🥕실습🥕</br>
+<details>
+<summary>🥕실습🥕</br></summary>
+<div markdown="1">       
 ``` javascript
 //exit 이벤트 실습
 process.on('exit',(code) = >{
@@ -37,13 +43,24 @@ process.on('uncaughtException', (error) = >{
 //예외를 강제로 발생
 error.error.error();
 ```
+</details>
 
-• OS모듈 사용해보기
+<details>
+<summary>• OS모듈 사용해보기</summary>
+<div markdown="1">
+os의 사용용도 보다
+require() 을 이용하여 모듈을 추출 한다는점에 집중    
+    
 ``` javascript
 const os = require('os'); //os객체 생성
 console.log(os.hostname());
 console.log(os.totalmem());
 ```
+</details>
+
+
+
+
 • URL모듈 사용해보기
 ``` javascript
 const url = require('url');
