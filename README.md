@@ -51,8 +51,8 @@ error.error.error();
 <details>
 <summary>• 🥕 OS모듈 사용해보기</summary>
 <div markdown="1">
-os의 사용용도 보다
-require() 을 이용하여 모듈을 추출 한다는점에 집중    
+ <u> os의 사용용도 보다
+    require() 을 이용하여 모듈을 추출 한다는점에 집중 </u>    
     
 ``` javascript
 const os = require('os'); //os객체 생성
