@@ -28,6 +28,7 @@ on(이벤트 이름, 이벤트 핸들러)</br>
 <details>
 <summary>🥕실습🥕</summary>
 <div markdown="1">
+    
 ``` javascript
 //exit 이벤트 실습
 process.on('exit',(code) = >{
@@ -45,6 +46,8 @@ error.error.error();
 ```
 </details>
 
+<hr>    
+    
 <details>
 <summary>• OS모듈 사용해보기</summary>
 <div markdown="1">
