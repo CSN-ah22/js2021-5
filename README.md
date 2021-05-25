@@ -15,6 +15,12 @@
 
 <hr>
 
+<details>
+<summary>🔘페이지 라우팅</summary>
+<div markdown="1">       
+<pre>페이지 라우팅: 클라이언트 요청에 적절한 페이지를 제공하는 기술</br></pre>
+</details>
+
 ## [5월 18일]
 >12주차  
 
@@ -82,7 +88,7 @@ console.log(os.totalmem());
 <summary>• 🥕 URL모듈 사용해보기</summary>
 <div markdown="1"> 
     parse("") : URL문자열을 URL객체로 변화해 리턴해준다</br>
-    
+
 ``` javascript
 const url = require('url');
 console.log(url.parse("https://naver.com"));
