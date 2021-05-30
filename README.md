@@ -4,12 +4,74 @@
 >13주차 
 
 <details>
-<summary>🔘 </summary>
+<summary>🔘EXPRESS 모듈을 사용한 서버 생성과 실행</summary>
 <div markdown="1">       
 </br>
 
 ``` javascript
+//🌺모듈 객체 생성
+const { response } = require('express');
+const express = require('express');
+const { request } = require('http');
+```
+</details>
 
+<hr>
+
+
+<details>
+<summary>🔘서버 생성</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+//🌺서버 생성
+const app = express();
+
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘서버 접속 요청이 들어왔을때 응답 처리 = 이벤트 처리</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+ app.use((request,response)=>{
+     response.send('<h1>Hello express</h1>');//브라우저에 출력
+ });
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘서버를 실행한다</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+app.listen(52273,()=>{
+    console.log('Server running at http://127.0.0.1:52273');
+}) 
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘페이지 라우팅</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+app.get('/page/:id', (request, response)=>{//사용자가 url끝에 /page/500 을 붙여서 요청하면 결과 창을 아래의 코드처럼 나타냄
+    const id = request.params.id;
+
+    response.send(`<h1> ${id} Page</h1>`);
+});
 ```
 </details>
 
@@ -20,6 +82,55 @@
 <div markdown="1">       
 <pre>페이지 라우팅: 클라이언트 요청에 적절한 페이지를 제공하는 기술</br></pre>
 </details>
+
+
+<hr>
+
+<details>
+<summary>🔘Content-Type</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+//모듈 추출
+const fs = require('fs');
+
+app.get('/image',(request, response)=>{
+    fs.readFile('image.png',(error,data)=>{
+        response.type('image/png');
+        response.send(data);
+    })
+})
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘서버를 실행한다 </summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+app.listen(52273,()=>{
+    console.log('Server running at http://127.0.0.1:52273');
+});
+```
+</details>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## [5월 18일]
 >12주차  
