@@ -31,7 +31,7 @@ app.listen(52273,()=>{
 
 /* ⚽Content-Type */
 
-//모듈 추출
+/* //모듈 추출
 const fs = require('fs');
 
 app.get('/image',(request, response)=>{
@@ -44,14 +44,69 @@ app.get('/image',(request, response)=>{
 //🌺서버를 실행한다 
 app.listen(52273,()=>{
     console.log('Server running at http://127.0.0.1:52273');
-});
+}); */
 
 
 /* ⚽리다이렉트 - 300번대의 상태코드 */
 
+/* //🌺request 이벤트 리스너를 설정합니다
+app.get('*', (request, response)=>{
+    response.redirect('http://naver.com');
+});
 
+//🌺서버를 실행한다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+}); */
 
 /* ⚽morgan 미들웨어 */
 
+/* //🌺모듈을 추출합니다 
+const morgan = require('morgan');
+
+//🌺서버를 생성한다 
+app.use(express.static('public'));
+app.use(morgan('combined'));
+
+//🌺request 이벤트 리스너를 설정합니다
+app.get('*', (request, response)=>{
+    response.send('명령 프롬포트를 확인해주세요');
+});
+
+//🌺서버를 실행한다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+}); */
 
 /* ⚽body-parser 미들웨어 */
+//🌺모듈을 추출합니다
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+
+//🌺서버를 생성한다 
+app.use(express.static('public'));
+app.use(morgan('combined'));
+app.use(bodyParser.urlencoded({extended: false}));
+
+//🌺request 이벤트 리스너를 설정합니다
+app.get('/', (request, response)=>{ // '/' 호출부호
+    let output='';
+    output += '<form method="post">';
+    output += '<input type="text" name="a" />';
+    output += '<input type="text" name="b" />';
+    output += '<input type="submit" />';
+    output += '</form>';
+
+    //🌺응답합니다
+    response.send(output);
+});
+
+app.post('/',(request, response)=>{
+    //🌺응답합니다
+    response.send(request.body);
+});
+
+//🌺서버를 실행합니다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+});

@@ -62,7 +62,7 @@ app.listen(52273,()=>{
 <hr>
 
 <details>
-<summary>🔘페이지 라우팅</summary>
+<summary>🔘페이지 라우팅 실습</summary>
 <div markdown="1">       
 </br>
 
@@ -78,7 +78,7 @@ app.get('/page/:id', (request, response)=>{//사용자가 url끝에 /page/500 �
 <hr>
 
 <details>
-<summary>🔘페이지 라우팅</summary>
+<summary>🔘페이지 라우팅 정의</summary>
 <div markdown="1">       
 <pre>페이지 라우팅: 클라이언트 요청에 적절한 페이지를 제공하는 기술</br></pre>
 </details>
@@ -90,6 +90,34 @@ app.get('/page/:id', (request, response)=>{//사용자가 url끝에 /page/500 �
 <summary>🔘Content-Type</summary>
 <div markdown="1">       
 </br>
+컴퓨터는 파일 이름 뒤에 mp3가 붙어도 그것이 mp3 파일인지 구분을 못 한다
+<br/>
+<br/>
+따라서 서버가 데이터를 제공할때 Context-Type 속성을
+헤더에 적어 보내야한다
+<br/>
+<br/>
+그러면 웹 브라우저가 헤더를 확인하고 제공된 데이터의
+형태를 확인한다
+<br/>
+<br/>
+이때 헤더에 제공시 MIME 형식으로 제공한다
+
+<details>
+<summary>🔘MIME</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+type('image/png'); //이미지 속성
+type('audio/mpe'); //음악 파일 속성 
+type('application/json'); //json 데이터 속성
+type('text/html');//html 속성
+type('text/plain');//기본 텍스트 속성
+type('multipart/form-data');//입력 양식 데이터 속성
+type('video/mpeg');//비디오 파일 속성
+```
+</details>
 
 ``` javascript
 //모듈 추출
@@ -120,15 +148,131 @@ app.listen(52273,()=>{
 
 <hr>
 
+<details>
+<summary>🔘리다이렉트 </summary>
+<div markdown="1">       
+</br>
+특정 경로로 웹 브라우저를 인도 할 때 사용하는것
 
+``` javascript
+//🌺request 이벤트 리스너를 설정합니다
+app.get('*', (request, response)=>{
+    response.redirect('http://naver.com');
+});
 
+//🌺서버를 실행한다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+});
+```
+</details>
 
+<hr>
 
+<details>
+<summary>🔘morgan 미들웨어 </summary>
+<div markdown="1">       
+</br>
+로그 출력 미들웨어 로써 서버를 실행하고 주소에 접속해서 명령 프롬포트를 확인하면 로그 출력을 볼 수 있다
+<br/>
+실제 운용할때는 로그 출력을 실시간으로 감시해서 여러 보안 위협을 검출할 수 있음
 
+``` javascript
+/* ⚽morgan 미들웨어 */
 
+//🌺모듈을 추출합니다 
+const morgan = require('morgan');
 
+//🌺서버를 생성한다 
+app.use(express.static('public'));
+app.use(morgan('combined'));
 
+//🌺request 이벤트 리스너를 설정합니다
+app.get('*', (request, response)=>{
+    response.send('명령 프롬포트를 확인해주세요');
+});
 
+//🌺서버를 실행한다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+});
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘결과 </summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+PS C:\Users\csa26\OneDrive\바탕 화면\js2021-5> node 05_25.js
+Server running at http://127.0.0.1:52273
+::ffff:127.0.0.1 - - [30/May/2021:03:39:27 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+::ffff:127.0.0.1 - - [30/May/2021:03:39:28 +0000] "GET /favicon.ico HTTP/1.1" 304 - "http://127.0.0.1:52273/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘body-parser 미들웨어 </summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+/* ⚽body-parser 미들웨어 */
+//🌺모듈을 추출합니다
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+
+//🌺서버를 생성한다 
+app.use(express.static('public'));
+app.use(morgan('combined'));
+app.use(bodyParser.urlencoded({extended: false}));
+
+//🌺request 이벤트 리스너를 설정합니다
+app.get('/', (request, response)=>{ // '/' 호출부호
+    let output='';
+    output += '<form method="post">';
+    output += '<input type="text" name="a" />';
+    output += '<input type="text" name="b" />';
+    output += '<input type="submit" />';
+    output += '</form>';
+
+    //🌺응답합니다
+    response.send(output);
+});
+
+app.post('/',(request, response)=>{
+    //🌺응답합니다
+    response.send(request.body);
+});
+
+//🌺서버를 실행합니다
+app.listen(52273, () => {
+    console.log('Server running at http://127.0.0.1:52273');
+});
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🔘결과 </summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+//브라우저창에 출력
+{"a":"hello","b":"1345"}
+```
+</details>
+
+<hr>
+<hr>
 
 
 
