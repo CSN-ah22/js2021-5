@@ -1,5 +1,257 @@
 # 최선아 [202030430]
 
+## [6월 01일]
+>14주차
+
+<details>
+<summary>🌳익스플로러에서 템플릿 문자열 사용법</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+var variable = 273;
+console.log('변수의 값은'+variable+'입니다');
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳window 객체</summary>
+<div markdown="1">       
+</br>
+경고 메세지 출력하기</br>
+alert(메세지);</br></br>
+프롬프트 출력하기</br>
+prompt(메세지, 임시글자);</br>
+</details>
+
+<hr>
+
+<details>
+<summary>🌳location 객체와 history객체</summary>
+<div markdown="1">       
+</br>
+문서의 URL주소 : href</br>
+새로고침한다 : reload();</br></br>
+history객체</br>
+앞으로 이동한다 : forward()</br>
+뒤로 이동한다 : back()</br>
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 라이브러리</summary>
+<div markdown="1">       
+jquery 라이브러리는 $ 함수를 사용한다</br></br>
+보통 다음 형태로 사용된다</br>
+> $(//매개변수).foo(//매개변수,//매개변수)</br></br>
+$ 함수의 매개변수에는 문서객체, css형식, html 형식의</br>문자열을 삽입한다</br></br>
+
+``` javascript
+// 일반 문서 객체로 jQuery 객체를 생성함
+$(document)
+
+//CSS 선택자로 jQuery 객체를 생성함
+$('h1')
+
+//HTML 문자열로 jQuery 객체를 생성함
+$('<h1></h1>')
+
+$(document).ready() //문서 객체의 생성 완료 시점을 잡는 이벤트 연결
+
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 문서 객체 선택 (CSS)</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+//🌺h1 태그를 선택함
+$('h1')
+
+//🌺h1태그 중에 class 속성으로 logo를 가진 태그를 선택함
+$('h1.logo')
+
+//🌺id 속성이 head인 태그를 선택함
+$('#head')
+
+//🌺input 태그 중에 type 속성이 submit인 태그를 선택한다
+$('input[type=submit]')
+
+//🌺 h1 태그의 부모 태그를 선택한다
+$('h1').parent();
+
+//h1 태그 내부에 있는 i 태그를 선택
+$('h1').find('i');
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 문서 객체 개별 조작</summary>
+<div markdown="1">       
+</br>
+여러개의 문서 객체 선택하기 = 배열</br>
+$jquery 변수.length</br>
+</br>
+요소 추출하기</br>
+$jquery 변수.get(1)</br>
+
+``` javascript
+$(document).ready(function (){
+var $headers = $('h1');
+for(var i=0; i< $headers.length; i++){
+    if(i % 2 == 1){
+        var domElement = $headers.get(i);
+        $(domElemnt).css('backgroundClolor','red');
+    }
+}
+});
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery each문</summary>
+<div markdown="1">       
+</br>
+forEach문과 같지만 순서가 조금 다르다</br>
+</br>
+each() 내부에서 this는 문서 객체를 말한다
+
+``` javascript
+$('h1').eah(function (index, item){
+$(this).css('backgroundColor',red);//this는 h1을 가리킴
+$('h1:even').css('backgroundColor',red); //짝수
+$('h1:odd').css('backgroundColor',red); //홀수
+});
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 문자 조작 </summary>
+<div markdown="1">       
+</br>
+html 태그 내부의 문자를 조작함</br>
+text()</br></br>
+html 태그 내부의 문자를 조작함(HTML 태그 인식)</br>
+html()</br>
+
+``` javascript
+$('h1').text() //모든 h1의 값을 출력함
+$('h1').html() //첫 번째 h1의 값을 출력함
+
+//text() 메서드와 html() 메서드의 set형태
+//매개변수가 있다면 세팅을 해주는것
+$('text-1').text('<h1>text 메서드</h1>');//css 안먹힘 '<h1>text 메서드</h1>' 그대로 출력
+$('text-2').html('<h1>html 메서드 </h1>');//css 먹힘 
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 스타일 조작 </summary>
+<div markdown="1">       
+</br>
+스타일을 조작할때 사용</br>
+.css()</br>
+
+``` javascript
+//h1 태그의 color 스타일 속성을 가져옴
+$('h1').css('color')
+//h1 태그의 color 스타일 속성을 red로 설정함
+$('h1').css('color','red')
+//h1 태그의 color 스타일 속성과 backgroundColor 스타일 속성을 설정
+$('h1').css({
+    color: 'red',
+    backgroundColor: 'orange'})
+
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 스타일 조작(attr)(placehold) </summary>
+<div markdown="1">       
+</br>
+스타일을 조작할때 사용</br>
+.css()</br>
+
+``` javascript
+//이미지 태그의 src 속성을 가져옵니다
+$('img').attr('src')
+
+// img 태그의 src 속성을 http://placehold.it/100x100으로 설정함
+$('img').css('src','http://placehold.it/100x100')
+//placehold 란 대략적인 크기를 보여주는 부트스트랩같은 라이브러리 요소 - 마크업 할때 유용
+
+//img 태그의 src 속성과 alt 속성을 한꺼번에 지정한다
+$('img').css({
+    src: 'http://placehold.it/100x100',
+    alt: 'placehold.it'
+})
+
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 문서 객체 생성</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+$('div') //div 태그를 찾아라
+
+$('<div></div>') //html에 div 요소를 넣어줘라✨</br>
+
+$('<h1></h1>').text('안녕하쇼').attr('data-test','test').css({backgroundColor:'red',color:'white'}).appendTo('body');
+```
+
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 이벤트 직접 연결</summary>
+<div markdown="1">       
+</br>
+
+``` javascript
+//기본 형태
+$('요소').on('이벤트이름',콜백함수 (event)){
+    // 이벤트 구현
+}
+```
+</details>
+
+<hr>
+
+<details>
+<summary>🌳jQuery 이벤트 간접 연결</summary>
+<div markdown="1">       
+</br>
+부모님에게 이벤트를 위임해서 부모가 이벤트를 처리하게 하는 것.</br>
+
+이벤트를 제거할때는 off() 메서드를 사용
+
+</details>
+
+<hr>
+
 ## [5월 25일]
 >13주차 
 
